@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Football - Receiving Minigame</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="game-container">
+        <header>
+            <h1>College Football Receiving Challenge</h1>
+            <div id="game-info">
+                <div id="score">Score: 0</div>
+                <div id="round-info">Round: 1/3</div>
+                <div id="timer">Time: 30s</div>
+            </div>
+        </header>
+
+        <div id="instructions-screen" class="screen">
+            <div class="instructions-content">
+                <h2>How to Play</h2>
+                <div class="instructions-text">
+                    <p>Control your receiver to catch footballs and earn points!</p>
+                    <ul>
+                        <li>Use <strong>ARROW KEYS</strong> or <strong>WASD</strong> to move your player</li>
+                        <li><span class="blue-ball">●</span> <strong>Blue footballs:</strong> +5 points</li>
+                        <li><span class="yellow-ball">●</span> <strong>Yellow footballs:</strong> +2 points</li>
+                        <li><span class="red-ball">●</span> <strong>Red footballs:</strong> -5 points (avoid these!)</li>
+                    </ul>
+                    <p class="round-info">
+                        <strong>3 Rounds:</strong><br>
+                        Round 1: 30 seconds<br>
+                        Round 2: 20 seconds<br>
+                        Round 3: 10 seconds
+                    </p>
+                    <p>Each round gets faster - stay focused!</p>
+                </div>
+                <button id="start-game-btn" class="game-button">Start Game</button>
+            </div>
+        </div>
+
+        <div id="game-screen" class="screen hidden">
+            <canvas id="game-canvas"></canvas>
+            <div id="round-transition" class="hidden">
+                <h3 id="round-title">Round 2</h3>
+                <p id="round-message">Get ready for the next round!</p>
+                <div id="countdown">3</div>
+            </div>
+        </div>
+
+        <div id="game-over-screen" class="screen hidden">
+            <div class="game-over-content">
+                <h2>Game Complete!</h2>
+                <div id="final-score">Final Score: 0</div>
+                <div id="performance-rating">Rating: Rookie</div>
+                <div id="xp-earned">Experience Points Earned: 0</div>
+                <button id="play-again-btn" class="game-button">Play Again</button>
+                <button id="main-menu-btn" class="game-button secondary">Main Menu</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+</html>
